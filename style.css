@@ -1,0 +1,59 @@
+/* QuizBattle — стили */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #2a1f6e 0%, #0b0e27 60%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.app { width: 100%; max-width: 640px; }
+
+.screen { display: none; text-align: center; }
+.screen.active { display: block; }
+
+.eyebrow { color: #00e0c7; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-size: 13px; margin: 0 0 8px; }
+h1 { font-size: clamp(26px, 6vw, 40px); margin: 0 0 12px; }
+h2 { font-size: clamp(20px, 5vw, 28px); margin: 20px 0; min-height: 2.4em; }
+.muted { color: #9aa3cc; }
+
+input {
+  width: 100%; max-width: 320px; padding: 14px 16px; margin: 16px 0;
+  border-radius: 12px; border: 2px solid #232a5c; background: #191e45; color: #fff; font-size: 17px;
+}
+
+button { font: inherit; cursor: pointer; border: none; }
+.big {
+  background: #7c4dff; color: #fff; font-size: 20px; font-weight: 700;
+  padding: 14px 40px; border-radius: 14px; box-shadow: 0 6px 0 #4b2bb0;
+}
+.big:active { transform: translateY(4px); box-shadow: 0 2px 0 #4b2bb0; }
+
+.topbar { display: flex; justify-content: space-between; color: #9aa3cc; font-weight: 700; }
+
+.timer { height: 10px; background: #191e45; border-radius: 6px; margin-top: 12px; overflow: hidden; }
+#timer-bar { height: 100%; width: 100%; background: #ffb84d; transition: width 0.1s linear; }
+
+.answers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.answer {
+  color: #fff; font-size: 18px; font-weight: 700; padding: 22px 12px; border-radius: 14px;
+  min-height: 84px; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.answer { background: #7c4dff; }
+.answer .shape { font-size: 22px; }
+.answer.dim { opacity: 0.35; }
+.answer.right { outline: 4px solid #fff; }
+
+.feedback { min-height: 1.5em; font-weight: 700; font-size: 18px; margin-top: 16px; }
+.final-score { font-size: 64px; font-weight: 800; color: #00e0c7; margin: 8px 0; }
+
+@media (max-width: 420px) {
+  .answers { grid-template-columns: 1fr; }
+  .answer { min-height: 64px; padding: 16px 12px; }
+}

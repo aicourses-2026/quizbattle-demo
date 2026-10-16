@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizBattle — насколько хорошо ты меня знаешь?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Экран старта -->
+    <section id="screen-start" class="screen active">
+      <p class="eyebrow">QuizBattle</p>
+      <h1>Насколько хорошо ты меня знаешь?</h1>
+      <p class="muted">5 вопросов · 15 секунд на ответ · чем быстрее, тем больше очков</p>
+      <input id="player-name" type="text" maxlength="20" placeholder="Твоё имя (можно ник)">
+      <button id="btn-start" class="big">Играть</button>
+    </section>
+
+    <!-- Экран вопроса -->
+    <section id="screen-question" class="screen">
+      <div class="topbar">
+        <span id="progress">Вопрос 1 из 5</span>
+        <span id="score">0 очков</span>
+      </div>
+      <div class="timer"><div id="timer-bar"></div></div>
+      <h2 id="question-text">Вопрос</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback"></p>
+    </section>
+
+    <!-- Экран финала -->
+    <section id="screen-final" class="screen">
+      <p class="eyebrow">Игра окончена</p>
+      <h1 id="final-title">Твой результат</h1>
+      <p id="final-score" class="final-score">0</p>
+      <p id="final-text" class="muted"></p>
+      <button id="btn-restart" class="big">Играть заново</button>
+    </section>
+
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
