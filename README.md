@@ -2,7 +2,7 @@
 
 Викторина «Насколько хорошо ты меня знаешь?» в стиле Kahoot: 5 вопросов, 15 секунд на ответ, бонус за скорость.
 
-**Играть:** https://ЛОГИН.github.io/quizbattle/
+**Играть:** [https://ЛОГИН.github.io/quizbattle/](https://aicourses-2026.github.io/quizbattle-demo/)
 
 ## Как устроено
 
