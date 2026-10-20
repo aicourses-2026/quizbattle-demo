@@ -35,7 +35,7 @@ function showQuestion() {
   box.innerHTML = "";
   q.answers.forEach((text, i) => {
     const btn = document.createElement("button");
-    btn.className = "answer";
+    btn.className = `answer shape-${i + 1}`;
     btn.innerHTML = `<span class="shape">${SHAPES[i]}</span><span></span>`;
     btn.lastChild.textContent = text;
     btn.addEventListener("click", () => choose(i));

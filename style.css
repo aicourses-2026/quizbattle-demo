@@ -46,6 +46,10 @@ button { font: inherit; cursor: pointer; border: none; }
   min-height: 84px; display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .answer { background: #7c4dff; }
+.answer.shape-1 { background: #ff6b6b; } /* red */
+.answer.shape-2 { background: #4ecdc4; } /* green */
+.answer.shape-3 { background: #ffe66d; } /* yellow */
+.answer.shape-4 { background: #7c3a7c; } /* purple */
 .answer .shape { font-size: 22px; }
 .answer.dim { opacity: 0.35; }
 .answer.right { outline: 4px solid #fff; }
