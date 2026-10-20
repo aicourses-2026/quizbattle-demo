@@ -2,6 +2,7 @@
 
 const TIME_PER_QUESTION = 15;          // секунд на вопрос
 const SHAPES = ["▲", "◆", "●", "■"];   // значки на кнопках, как в Kahoot
+const PENALTY_FOR_WRONG = 100;         // штраф за неправильный ответ
 
 let current = 0;
 let score = 0;
@@ -77,7 +78,9 @@ function choose(index) {
   } else if (index === -1) {
     $("feedback").textContent = "Время вышло ⏰";
   } else {
-    $("feedback").textContent = "Мимо 🙈";
+    // Штраф за неправильный ответ
+    score = Math.max(0, score - PENALTY_FOR_WRONG);
+    $("feedback").textContent = `-${PENALTY_FOR_WRONG}! Мимо`;
   }
   $("score").textContent = `${score} очков`;
 
